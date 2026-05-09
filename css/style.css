@@ -42,15 +42,15 @@ ul {
 
 /* ── Design tokens ────────────────────────────────────────── */
 :root {
-  --color-bg:        #f7f3ed;
-  --color-surface:   #ffffff;
-  --color-primary:   #4a7c59;
-  --color-primary-dark: #38613f;
-  --color-accent:    #a0522d;
-  --color-text:      #2c2a27;
-  --color-muted:     #6b6560;
-  --color-border:    #ddd5c8;
-  --color-hero-overlay: rgba(30, 40, 25, 0.52);
+  --color-bg:        #ede8de;
+  --color-surface:   #faf7f2;
+  --color-primary:   #2e6b6b;
+  --color-primary-dark: #1e4a4a;
+  --color-accent:    #e8823a;
+  --color-text:      #1e2c2c;
+  --color-muted:     #5a7070;
+  --color-border:    #d0cbbf;
+  --color-hero-overlay: rgba(0, 0, 0, 0);
 
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-sans:  'Lato', system-ui, sans-serif;
@@ -271,27 +271,33 @@ p:last-child { margin-bottom: 0; }
    HERO
    ============================================================ */
 .hero {
-  position: relative;
-  min-height: min(90vh, 700px);
   display: flex;
   align-items: center;
-  background-color: #2d3d28;
-  /* Replace with: background-image: url('./images/hero.jpg'); */
-  background-size: cover;
-  background-position: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  padding-block: clamp(3rem, 8vw, 6rem);
 }
 
 .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background-color: var(--color-hero-overlay);
+  display: none;
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
-  max-width: 680px;
-  padding-block: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 560px;
+  padding-block: 0;
+}
+
+.hero-logo {
+  max-width: 460px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 2.5rem;
+  mix-blend-mode: darken;
 }
 
 .hero-eyebrow {
@@ -409,7 +415,7 @@ p:last-child { margin-bottom: 0; }
    HERBS
    ============================================================ */
 .herbs {
-  background-color: #eef4ef;
+  background-color: #e4eded;
 }
 
 .herbs-grid {
@@ -432,7 +438,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .herb-img-wrap {
-  background-color: #d4e8d4;
+  background-color: #c8dede;
 }
 
 .herb-img-placeholder {
@@ -464,7 +470,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .herb-tags li {
-  background-color: #e0ede0;
+  background-color: #d4e8e8;
   color: var(--color-primary-dark);
   font-size: .75rem;
   font-weight: 700;
@@ -559,7 +565,7 @@ p:last-child { margin-bottom: 0; }
 .form-group textarea:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(74,124,89,.15);
+  box-shadow: 0 0 0 3px rgba(46,107,107,.15);
 }
 
 .form-group textarea {
@@ -578,7 +584,7 @@ p:last-child { margin-bottom: 0; }
    FOOTER
    ============================================================ */
 .site-footer {
-  background-color: #2d3d28;
+  background-color: #1e3a3a;
   color: rgba(255,255,255,.7);
   padding-block: 2.5rem;
 }
@@ -601,7 +607,7 @@ p:last-child { margin-bottom: 0; }
 .footer-logo span {
   font-style: italic;
   font-weight: 400;
-  color: #a8d0a8;
+  color: #8ec9c9;
 }
 
 .footer-copy {
@@ -645,7 +651,7 @@ p:last-child { margin-bottom: 0; }
 }
 
 .form-success {
-  background-color: #eef4ef;
+  background-color: #e4eded;
   border: 1px solid var(--color-primary);
   border-radius: var(--radius);
   padding: 1.5rem;
