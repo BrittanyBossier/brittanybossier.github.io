@@ -325,9 +325,10 @@ p:last-child { margin-bottom: 0; }
 
 .about-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: clamp(2rem, 5vw, 5rem);
   align-items: center;
+  max-width: 760px;
 }
 
 .about-image {
